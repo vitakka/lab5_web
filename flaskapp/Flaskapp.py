@@ -4,9 +4,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def data_to():
-    some_str = "Пример текста"
+    some_str = "название страницы опца дрица"
     some_value = 42
-    some_pars = ["параметр1", "параметр2"]
+    some_pars = {'user':'Ivan','color':'red'}
     return render_template('simple.html',
                            some_str=some_str,
                            some_value=some_value,
