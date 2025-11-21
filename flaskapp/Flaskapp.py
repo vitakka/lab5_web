@@ -1,4 +1,4 @@
-from flask import Flask, render_template, flash, request
+from flask import Flask, render_template, flash
 from flask_wtf import FlaskForm, RecaptchaField
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
@@ -14,8 +14,7 @@ app = Flask(__name__)
 SECRET_KEY = 'secret'
 app.config['SECRET_KEY'] = SECRET_KEY
 app.config['RECAPTCHA_USE_SSL'] = False
-app.config['RECAPTCHA_PUBLIC_KEY'] = '6LeHBBMsAAAAAILMMAI3EGKexqE7-Z8K7Xt3TkCJ'
-app.config['RECAPTCHA_PRIVATE_KEY'] = '6LeHBBMsAAAAAPcmHYZ8ECq9148LgIR90ACRvZf5'
+
 app.config['RECAPTCHA_OPTIONS'] = {'theme': 'white'}
 
 bootstrap = Bootstrap(app)
